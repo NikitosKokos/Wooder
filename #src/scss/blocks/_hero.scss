@@ -1,12 +1,11 @@
 .hero{
     background: #000;
-    min-height: 100vh;
+    overflow: auto;
     position: relative;
-    margin: 0px 0px 40px 0px;
      &:before{
         content: '';
         position: absolute;
-        bottom: -25px;
+        bottom: 25px;
         right: 25px;
         width: 23px;
         height: 25px;
@@ -20,6 +19,9 @@
         left: 0;
         width: 50%;
         height: 100%;
+        @media (max-width: 600px){
+            width: 100%;
+        }
     }
     &__bg-r{
         position: absolute;
@@ -27,6 +29,9 @@
         right: 0;
         width: 50%;
         height: calc(100% + 40px);
+        @media (max-width: 600px){
+           display: none;
+        }
     }
 
     &__content {
@@ -36,6 +41,16 @@
 
     &__info {
         margin: 0px 300px 0px 0px;
+        @media (max-width: $md3+px){
+            margin: 0px 0px 0px 0px;
+            padding: 0 100px 0 50px;
+        }
+        @media (max-width: 600px){
+            padding: 0 30px 0 30px;
+        }
+        @media (max-width: $md4+px){
+            padding: 0 30px 0 10px;
+        }
     }
 
     &__slide-num {
@@ -57,6 +72,23 @@
             transform: translate(-50%,-100%);
         }
         margin: 0px 0px 85px 0px;
+        @media (max-width: 1480px){
+            font-size: 80px;
+            margin: 0px 0px 70px 0px;
+        }
+        @media (max-width: $md1+px){
+            font-size: 70px;
+            &:before{
+                width: 4px;
+                height: 40px;
+            }
+        }
+        @media (max-width: $md2+px){
+            font-size: 60px;
+        }
+        @media (max-width: $md3+px){
+           display: none;
+        }
     }
 
     &__count {
@@ -80,6 +112,9 @@
                 background-color: #bea67c;
             }
             margin: 0px 0px 40px 0px;
+            @media (max-width: $md4+px){
+                margin: 0px 0px 30px 0px;
+            }
             &:last-child{
               margin: 0px 0px 0px 0px;
             }
@@ -88,7 +123,11 @@
 
     &__body {
         overflow: hidden;
-        // height: 100vh; 
+        // height: 0;
+        // height: 100%; 
+        // min-height: auto;
+        padding: 80px 0px 0px 0px;
+        width: 100%;
         position: relative;
         z-index: 2;
     }
@@ -132,6 +171,28 @@
         opacity: 0;
         visibility: hidden;
         transform: translateX(-30px);
+        @media (max-width: 1480px){
+            margin: 0px 0px 50px 0px;
+            font-size: 90px;
+            letter-spacing: 18px;
+        }
+        @media (max-width: $md1+px){
+            font-size: 80px;
+            letter-spacing: 15px;
+            margin: 0px 0px 30px 0px;
+        }
+        @media (max-width: $md2+px){
+            font-size: 60px;
+        }
+        @media (max-width: 600px){
+            font-size: 50px;
+            letter-spacing: 10px;
+        }
+        @media (max-width: $md4+px){
+           font-size: 40px;
+           letter-spacing: 5px;
+        }
+
     }
     &__link{
         color: $white;
@@ -148,12 +209,35 @@
         position: relative;
         margin: 0px 0px 70px 0px;
         transition: all .3s ease-in-out;
+        @media (max-width: 1480px){
+            padding: 0 90px 0 60px;
+            height: 55px;
+            margin: 0px 0px 50px 0px;
+            &:before{
+                right: 45px;
+            }
+        }
+        @media (max-width: $md1+px){
+            padding: 0 70px 0 40px;
+            height: 50px;
+            margin: 0px 0px 30px 0px;
+             &:before{
+                right: 25px;
+            }
+        }
+        @media (max-width: $md2+px){
+            padding: 0 40px;
+             &:before{
+                display: none;
+            }
+        }
         &:before{
             content: '';
             position: absolute;
             width: 35px;
             height: 11px;
             background: url('../img/hero/array_r.png') center no-repeat;
+            background-size: contain;
             top: 50%;
             transform: translateY(-50%);
             right: 67px;
@@ -187,6 +271,10 @@
             object-fit: contain;
         }
         margin: 0px 0px 20px 0px;
+        @media (max-width: $md1+px){
+            width: 10px;
+            height: 15px;
+        }
     }
 
     &__array {
@@ -198,6 +286,10 @@
             object-fit: contain;
         }
         margin: 0px 0px 20px 0px;
+        @media (max-width: $md1+px){
+            width: 5px;
+            height: 35px;
+        }
     }
 
     &__t {
@@ -209,6 +301,8 @@
         span{
             writing-mode: vertical-lr;
         }
-        
+        @media (max-width: $md1+px){
+            font-size: 12px;
+        }
     }
 }

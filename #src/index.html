@@ -6,8 +6,8 @@
 	<body>
 		<div class="wrapper">
 			@@include('_header.html',{})
-			<main class="page" ">
-				<section class="hero">
+			<main class="page" id="fullpage">
+				<section class="hero section">
 					<div class='hero__content _container'>
 						<div class="hero__info">
 							<div class="hero__slide-num">
@@ -59,9 +59,13 @@
 					<div class="hero__bg-l _ibg"><img src="./img/hero/bg_l.png" alt="bg_l"></div>
 					<div class="hero__bg-r _ibg"><img src="./img/hero/bg_r.jpg" alt="bg_r"></div>
 				</section>
-				<section class="item">fdsfsdf</section>
+				<section class="item section">fdsfsdf</section>
 			</main>
 			@@include('_footer.html',{})
+		</div>
+		<div class="rotate">
+			<div class="rotate__logo"><img src="./img/logo/logo.png" alt="logo_r"></div>
+			<div class="rotate__title">Please rotate your device</div>
 		</div>
 		@@include('_popup.html',{})
 		@@include('_js.html',{})

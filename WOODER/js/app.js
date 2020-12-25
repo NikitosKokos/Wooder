@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const heroSlider = new Swiper('.hero__body', {     
         slidesPerView: 1,
-        direction: 'vertical',
+        // direction: 'vertical',
         // allowTouchMove: false,
         // simulateTouch:false,
         // loop: true,
@@ -43,11 +43,11 @@ document.addEventListener('DOMContentLoaded', () => {
     heroSlider.on('slideChange', getCountSlide);
 
 
-    // new fullpage('#fullpage', {
-    //     //options here
-    //     autoScrolling:true,
-    //     scrollHorizontally: true
-    // });
+    new fullpage('#fullpage', {
+        autoScrolling:true,
+        scrollHorizontally: true,
+        scrollOverflow: true,
+    });
     
     
 // end
