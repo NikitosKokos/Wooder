@@ -1,0 +1,101 @@
+.__select {
+    position: relative;
+    height: 40px;
+    &[data-state="active"] {
+      .__select__title {
+        &::after {
+          transform: translateY(-80%) rotate(180deg);
+        }
+      }
+      
+      .__select__content {
+        opacity: 1;
+        visibility: visible;
+      }
+      
+      .__select__label + .__select__input + .__select__label {
+        max-height: 40px;
+        border-top-width: 1px;
+      }
+    }
+  }
+  .__select__title {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px 15px 10px 15px;
+    color: rgba($color: #fff, $alpha: .5);
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.38px;
+    transition: all .3s ease-in-out;
+    @media (min-width: 992px){
+       &:hover{
+       color: #bea67c;
+     }
+    }
+    cursor: pointer;
+    
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0px;
+      display: block;
+      width: 6px;
+      height: 4px;
+      transition: all .3s ease-in-out;
+      border: 4px solid transparent; 
+      border-top: 6px solid #a9946e;
+      transform: translateY(-30%);
+    }
+  }
+  .__select__content {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    // width: calc(100% - 6px);
+    transition: all .3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 8;
+  }
+  .__select__input {
+    display: none;
+  
+    &:checked + label {
+        color: $white;  
+    }
+    &:disabled + label {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+  .__select__label {
+    display: flex;
+    align-items: center;
+    color: rgba($color: #fff, $alpha: .5);
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.38px;
+    transition: all .3s ease-in-out;
+    min-height: 40px;
+    max-height: 0;
+    padding: 10px 15px 10px 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    & + input + & {
+      // border-top: 0 solid #0097ac;
+    }
+    @media (min-width: 992px){
+       &:hover{ 
+        color: $white;    
+     }
+    }
+  }
