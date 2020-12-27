@@ -39,11 +39,22 @@ document.addEventListener('DOMContentLoaded', () => {
     getCountSlide();
     heroSlider.on('slideChange', getCountSlide);
 
-
+    const header = document.querySelector('.header');
+    const hero = document.querySelector('.hero');
     new fullpage('#fullpage', {
+        licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
         autoScrolling:true,
         scrollHorizontally: true,
         scrollOverflow: true,
+        // verticalCentered: false,
+
+        onLeave: (before,after) => {
+            if(!after.index == 0){
+                header.classList.add('_active');
+            }else{
+                header.classList.remove('_active');
+            }
+        }
     });
     
     

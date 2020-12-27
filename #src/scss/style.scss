@@ -13,6 +13,8 @@
 @import "./blocks/header";
 @import "./blocks/footer";
 @import "./blocks/hero";
+@import "./blocks/item";
+@import "./blocks/vedeos";
 
 // global styles
 ._container {
@@ -29,7 +31,11 @@
 		padding: 0 10px;
 	}
 }
-
+.iScrollIndicator {
+	background:#bea67c !important;
+	opacity: .3 !important;
+	z-index: 999 !important;
+  }
 .wrapper {
 	width: 100%;
 	min-height: 100%;
