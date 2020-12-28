@@ -2395,6 +2395,9 @@ html.fp-enabled {
 }
 
 .about__content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
