@@ -14,7 +14,9 @@
 @import "./blocks/footer";
 @import "./blocks/hero";
 @import "./blocks/item";
-@import "./blocks/vedeos";
+@import "./blocks/videos";
+@import "./blocks/video";
+@import "./blocks/about";
 
 // global styles
 ._container {
@@ -33,7 +35,7 @@
 }
 .iScrollIndicator {
 	background:#bea67c !important;
-	opacity: .3 !important;
+	opacity: 0 !important;
 	z-index: 999 !important;
   }
 .wrapper {

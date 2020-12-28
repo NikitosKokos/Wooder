@@ -1,0 +1,55 @@
+.footer {
+    position: relative;
+    width: 100%;
+    padding: 25px 0;
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        @media (max-width: $md3+px){
+           flex-direction: column;
+        }
+    }
+
+    &__copy {
+        color: #464646;
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: 0.38px;
+    }
+
+    &__logo {
+        width: 173px;
+        img{
+            width: 100%;
+            height: auto;
+        }
+        @media (max-width: $md3+px){
+            margin: 0px 0px 10px 0px;
+        }
+    }
+
+    &__by {
+        color: #7d7d7d;
+        font-size: 15px;
+        font-weight: 400;
+        a{
+            color: #464646;
+            letter-spacing: 0.38px;
+        }
+        @media (max-width: $md3+px){
+            margin: 0px 0px 10px 0px;
+        }
+    }
+    &__bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+}
+
