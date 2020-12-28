@@ -2366,7 +2366,7 @@ html.fp-enabled {
   position: absolute;
   width: 25px;
   height: 25px;
-  background: url("../../img/video/play.png") center no-repeat;
+  background: url("../img/video/play.png") center no-repeat;
   background-size: contain;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -3242,6 +3242,6 @@ body.hidden {
 
 .webp .item-videos__img:after{ background: url(../img/videos/play.webp) center no-repeat; }
 
-.webp .video__btn:before{ background: url(../../img/video/play.webp) center no-repeat; }
+.webp .video__btn:before{ background: url(../img/video/play.webp) center no-repeat; }
 
 .webp .about__btn:after{ background: url(../img/icons/array.webp) 0 0 no-repeat; }
